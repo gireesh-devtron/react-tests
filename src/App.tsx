@@ -3,31 +3,31 @@ import { useState } from 'react';
 
 function App() {
 
-  const[calc, setCalc] = useState("")
+  const[calciVal, setCalciVal] = useState("")
   const[result, setResult] = useState("");
   const ops = ['/', '*', '+', '-', '.','%'];
 
 
   const updateCalc = (value: string) => {
     if(
-      ops.includes(value) && calc === '' ||
-      ops.includes(value) && ops.includes(calc.slice(-1))
+      ops.includes(value) && calciVal === '' ||
+      ops.includes(value) && ops.includes(calciVal.slice(-1))
     ){
       return;
     }
-    if (calc === '0')
-      setCalc(value)
-    else if (calc.slice(-1) === '0' && ops.includes(calc.slice(-2,-1)))
-      setCalc(calc.slice(0,-1) + value)
+    if (calciVal === '0')
+      setCalciVal(value)
+    else if (calciVal.slice(-1) === '0' && ops.includes(calciVal.slice(-2,-1)))
+      setCalciVal(calciVal.slice(0,-1) + value)
     else
-      setCalc(calc + value)
+      setCalciVal(calciVal + value)
 
     if(!ops.includes(value)){
-      if (calc === '0') 
+      if (calciVal === '0')
         setResult(eval(value).toString())
-      else if (calc.slice(-1) === '0' && ops.includes(calc.slice(-2,-1)))
-      setResult(eval(calc.slice(0,-1) + value).toString());
-      else setResult(eval(calc + value).toString());
+      else if (calciVal.slice(-1) === '0' && ops.includes(calciVal.slice(-2,-1)))
+      setResult(eval(calciVal.slice(0,-1) + value).toString());
+      else setResult(eval(calciVal + value).toString());
     }
   }
 
@@ -43,22 +43,22 @@ function App() {
   }
 
   const calculate = () => {
-    setCalc(eval(calc).toString());
+    setCalciVal(eval(calciVal).toString());
   }
 
 
   const deleteLast = () => {
-    if (calc == ''){
+    if (calciVal == ''){
       return;
     }
-    const value = calc.slice(0, -1);
-    setCalc(value);
+    const value = calciVal.slice(0, -1);
+    setCalciVal(value);
   }
 
     
   const setAC = () =>{
     const value = "";
-    setCalc(value)
+    setCalciVal(value)
     setResult(value)
   }
   
@@ -73,7 +73,7 @@ function App() {
 
          <div className="display">
            {result?  <span>({result})</span> : ''} &nbsp; 
-           { calc || "0" }
+           { calciVal || "0" }
          </div>
 
 
