@@ -16,6 +16,7 @@ let initUser: User = {
   id: Date.now(),
   userName: '',
   mobileNumber: '',
+  alternateMobileNumber: '',
   emailId: '',
   address: '',
   DOB: '',

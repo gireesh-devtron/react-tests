@@ -2,6 +2,7 @@ export type User = {
   id: number;
   userName: string;
   mobileNumber: string;
+  alternateMobileNumber: string
   emailId: string;
   address: string;
   DOB: string;
