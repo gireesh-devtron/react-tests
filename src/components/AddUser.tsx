@@ -34,6 +34,19 @@ const AddUser = () => {
           </div>
           <div className="mt-2">
             <label htmlFor="" className="form-label">
+              Alternate Mobile Number
+            </label>
+            <input
+                type="text"
+                className="form-control"
+                placeholder="Enter Alternate Mobile Number"
+                name="mobileNumber"
+                value={newUser.alternateMobileNumber}
+                onChange={changeInput}
+            />
+          </div>
+          <div className="mt-2">
+            <label htmlFor="" className="form-label">
               Email Id
             </label>
             <input
