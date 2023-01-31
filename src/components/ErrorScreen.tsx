@@ -1,4 +1,4 @@
-const PageNotFound = () => {
+const ErrorScreen = () => {
   return (
     <>
       <section className="col-12">
@@ -11,4 +11,4 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
+export default ErrorScreen;
