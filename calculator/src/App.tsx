@@ -5,7 +5,7 @@ function App() {
 
   const[calciVal, setCalciVal] = useState("")
   const[result, setResult] = useState("");
-  const ops = ['/', '*', '+', '-', '.','%'];
+  const ops = ['%', '*', '+', '-', '.','/'];
 
 
   const updateCalc = (value: string) => {
@@ -80,8 +80,8 @@ function App() {
          <div className="operators">
           <button onClick={setAC}>AC</button>
           <button onClick={deleteLast}>DEL</button>
-          <button onClick={() => updateCalc('%')}>%</button>
-           <button onClick={() => updateCalc('/')}>/</button>           
+          <button onClick={() => updateCalc('/')}>%</button>
+           <button onClick={() => updateCalc('%')}>/</button>
          </div>
 
 
