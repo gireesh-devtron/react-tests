@@ -1,15 +1,15 @@
  :root {
-  --primary: #d81e5b;
-  --secondary: #8c38ff;
-  --dark: #131a26;
-  --light: #eee;
+  --primary: orange;
+  --secondary: black;
+  --dark: grey;
+  --light: white;
  }
 
  *{
   margin: 0;
   padding: 0;
   box-sizing: 0;
-  font-family: 'Fira Sans', sans-serif;  
+  font-family: 'Fira Sans', sans-serif;
  }
 
  body{
