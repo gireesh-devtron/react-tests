@@ -69,7 +69,7 @@ const EditUser = () => {
 
           <div className="mt-2">
             <label htmlFor="" className="form-label">
-              Description
+              Address
             </label>
             <textarea
               className="form-control"
